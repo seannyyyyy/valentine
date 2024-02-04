@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Proposal</title>
+<link rel="stylesheet" href="main/style.css"
+</head>
+<body>
+    
+<div id="giff">
+    <img src="image/gif1.gif" alt="">
+
+</div>
+
+<div id="proposal-container">
+  <h1>Hi Love, Will you be my Valentine?</h1>
+  <button id="no-button" onclick="moveButton()">No</button>
+  <button id="yes-button" onclick="showPopup()">Yes</button>
+</div>
+
+<div id="giff2">
+    <img src="image/gif1.gif" alt="">
+
+</div>
+
+<div id="popup">
+  <p>Yey, see you on February 14 memei ko. I love you so much😘❤️!</p>
+</div>
+
+<div id="overlay"></div>
+
+<script>
+  function moveButton() {
+    const button = document.getElementById('no-button');
+    const maxX = window.innerWidth - button.clientWidth;
+    const maxY = window.innerHeight - button.clientHeight;
+
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+
+    button.style.position = 'absolute';
+    button.style.left = `${randomX}px`;
+    button.style.top = `${randomY}px`;
+  }
+
+  function showPopup() {
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
